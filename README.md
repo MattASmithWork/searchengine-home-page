@@ -1,2 +1,2 @@
 # js-digital-clock
-Create Pretty digital clock with html css js
+Create digital clock and search engine to use as home page with html css js
