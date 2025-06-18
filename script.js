@@ -9,3 +9,11 @@ setInterval(() => {
     min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes()
     sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds()
 }, 1000)
+
+function searchGoogle() {
+    const query = document.getElementById('searchInput').value;
+    if (query) {
+      const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+      window.open(url, '_blank');
+    }
+}
