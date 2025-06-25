@@ -13,14 +13,27 @@ window.clock = function (){
     }, 1000);
 }
 
-//google search bar
+// google search bar
 window.searchGoogle = function () {
-  const query = document.getElementById('searchInput').value;
-  if (query) {
-    const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-    window.open(url, '_blank');
-  }
-};
+    const query = document.getElementById('searchInput').value;
+    if (query) {
+      const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+      window.open(url, '_blank');
+    }
+  };
+  
+  // Add this code to set up the Enter key event listener
+  document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('searchInput');
+    if (input) {
+      input.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          window.searchGoogle();
+        }
+      });
+    }
+  });
 
 /*
 	WeatherForecastDisplay encapsulates the weather forecast
