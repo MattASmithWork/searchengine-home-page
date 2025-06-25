@@ -1,8 +1,10 @@
 window.clock = function (){
+    //select tags for clock update
     let hrs = document.getElementById("hrs");
     let min = document.getElementById("min");
     let sec = document.getElementById("sec");
 
+    //set intervals for clock update
     setInterval(() => {
     const currentTime = new Date();
         if (hrs) hrs.innerHTML = String(currentTime.getHours()).padStart(2, '0');
@@ -11,6 +13,7 @@ window.clock = function (){
     }, 1000);
 }
 
+//google search bar
 window.searchGoogle = function () {
   const query = document.getElementById('searchInput').value;
   if (query) {
@@ -26,7 +29,7 @@ window.searchGoogle = function () {
         //used for looking up a simple text value for the month.
         var MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
         /*
-        * WeatherForecastWidget - encapsulates data retrieval and displau
+        * WeatherForecastWidget - encapsulates data retrieval and display
         */
         function WeatherForecastWidget(selector) {
 
