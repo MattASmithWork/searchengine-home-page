@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock</title>
+    <title>Digital Clock & Weather Home page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!--jquery used to minimize the code -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
+
 <body>
-    
     <div class="main">
-        <div class="clock">
-            <div class="clock_element">
-                <div class="clock_number">
-                    <span class="number" id="hrs">12</span>
-                    <span class="title">HOURS</span>
-                </div>
-                <div  class="clock_number">
-                    <span class="number" id="min">10</span>
-                    <span class="title">MINUTES</span>
-                </div>
-                <div  class="clock_number">
-                    <span class="number" id="sec">10</span>
-                    <span class="title">SECONDS</span>
+        <div class="grid-container">
+            <div class="item2">
+                <div class="horizontalweatherForecast" data-key="M9VUE5HNX3ZPMSHFUDXENQFU8" data-location="Grange-Over-Sands, UK" data-unitGroup="metric"></div>
+            </div>
+            <div class="item4"></div>
+            <div class="item5">
+                <div class="clock" >
+                    <div class="clock_element">
+                        <div class="clock_number">
+                            <span class="number" id="hrs">12</span>
+                            <span class="title">HOURS</span>
+                        </div>
+                        <div class="clock_number">
+                            <span class="number" id="min">10</span>
+                            <span class="title">MINUTES</span>
+                        </div>
+                        <div class="clock_number">
+                            <span class="number" id="sec">10</span>
+                            <span class="title">SECONDS</span>
+                        </div>
+                        <script>clock()</script>
+                    </div>
                 </div>
             </div>
-            <div class="search-box">
-                <input type="text" id="searchInput">
-                <button onclick="searchGoogle()">Search</button>
+            <div class="item6"></div>
+            <div class="item7"></div>
+            <div class="item8">
+                <div class="search-box">
+                    <input type="text" id="searchInput">
+                    <button onclick="searchGoogle()">Search</button>
+                </div>
             </div>
+            <div class="item9"></div>
+
         </div>
-        
     </div>
 </body>
-<script src="script.js"></script>
+<script>
+    WeatherForecastDisplay.attach(".horizontalweatherForecast");
+</script>
+
 </html>
