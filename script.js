@@ -22,7 +22,7 @@ window.searchGoogle = function () {
     }
   };
   
-  // Add this code to set up the Enter key event listener
+  //the Enter key event listener
   document.addEventListener('DOMContentLoaded', function () {
     const input = document.getElementById('searchInput');
     if (input) {
